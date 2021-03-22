@@ -1,2 +1,2 @@
 # barber-shop
-Site desenvolvido com o tema de barbearia
+Site em desenvolvimento com o tema de barbearia
