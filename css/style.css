@@ -93,7 +93,7 @@ img {
 /* INTRO */
 
 .intro {
-  background: url("/img/bg-intro.jpg") no-repeat center;
+  background: url("../img/bg-intro.jpg") no-repeat center;
   background-size: cover;
   background-attachment: fixed;
   padding: 200px 0;
@@ -187,7 +187,7 @@ img {
 }
 
 .servicos h2::before {
-  content: url("/img/icons/mustache.svg");
+  content: url("../img/icons/mustache.svg");
   display: block;
 }
 
@@ -233,7 +233,7 @@ img {
       rgba(204, 191, 178, 0.39) 0.67%,
       rgba(216, 194, 173, 0.39) 99.13%
     ),
-    url("/img/bg-contact.jpg") no-repeat center;
+    url("../img/bg-contact.jpg") no-repeat center;
   background-size: cover;
   background-attachment: fixed;
   padding: 3.75rem;
