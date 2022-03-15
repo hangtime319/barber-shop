@@ -1,0 +1,115 @@
+.footer {
+  background: $cor-principal;
+  display: flex;
+  flex-wrap: wrap;
+  padding: 60px;
+  @include device(smartphone) {
+  }
+  > div {
+    @include device(tablet) {
+      margin: 0 auto 20px auto;
+    }
+    @include device(smartphone) {
+      margin: 0 auto;
+    }
+  }
+  > div a img {
+    border-radius: 50%;
+    max-width: 190px;
+    margin-left: 70px;
+    @include device(tablet) {
+      margin-left: 0;
+    }
+    @include device(smartphone) {
+      margin: 0;
+    }
+  }
+}
+
+.footer-fb,
+.footer-ig {
+  width: 40px;
+  margin: 30px 15px 10px 10px;
+  align-self: center;
+  display: inline-block;
+}
+
+.footer-info {
+  display: flex;
+  margin: 0 auto;
+  gap: 90px;
+  @include device(smartphone) {
+    flex-direction: column;
+    gap: 10px;
+  }
+}
+
+.footer-links {
+  a {
+    padding: 10px;
+    &:hover {
+      background-color: $cor-efeito-botao;
+      border-radius: 5px;
+      @include efeito-btn;
+    }
+  }
+}
+
+.footer-links,
+.footer-horario,
+.footer-end {
+  display: flex;
+  flex-flow: column wrap;
+  @include device(tablet) {
+    flex-direction: row;
+  }
+  @include device(smartphone) {
+    margin-top: 20px;
+    @include device(smartphone) {
+    }
+  }
+}
+
+.footer-links li,
+.footer-horario p,
+.footer-horario span,
+.footer-end p,
+.footer-end span {
+  margin: 0 0 10px 0;
+}
+
+.footer-links a,
+.footer-horario p,
+.footer-horario span,
+.footer-end p,
+.footer-end span {
+  @include texto(paragrafo);
+  color: $cor-txt-complementar;
+  @include device(tablet) {
+    font-size: rem(16);
+  }
+}
+
+.copy {
+  background-color: $cor-principal;
+  display: flex;
+  justify-content: center;
+  p {
+    font-size: rem(20);
+    font-weight: 300;
+    color: $cor-txt-complementar;
+    text-align: center;
+    margin-bottom: 30px;
+    @include device(tablet) {
+      font-size: rem(16);
+    }
+    &::before {
+      content: "";
+      display: block;
+      width: 100vw;
+      height: 1px;
+      background-color: $cor-txt-complementar;
+      margin-bottom: 30px;
+    }
+  }
+}

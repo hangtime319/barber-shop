@@ -1,0 +1,74 @@
+.sobre {
+  display: flex;
+  flex-flow: column wrap;
+  justify-content: space-between;
+  background: $cor-principal;
+  padding: 60px;
+  h2 {
+    @include texto(suporte);
+    font-weight: 300;
+    margin: 0 auto 10px auto;
+    @include device(tablet) {
+      @include texto(paragrafo);
+    }
+    @include device(smartphone) {
+      @include texto(paragrafo);
+      margin-bottom: 20px;
+    }
+  }
+  > p {
+    @include texto(subtitulo);
+    font-weight: 500;
+    margin: 0 auto;
+    width: 70vw;
+    @include device(tablet) {
+      @include texto(suporte);
+    }
+    @include device(smartphone) {
+      @include texto(suporte);
+    }
+  }
+}
+
+.sobre-info {
+  display: flex;
+  align-items: center;
+  margin-top: 10px;
+  @include device(smartphone) {
+    margin-top: 20px;
+    flex-wrap: wrap;
+  }
+  img {
+    @include device(smartphone) {
+      width: 80%;
+      margin: 20px auto;
+    }
+  }
+  p {
+    @include texto(paragrafo);
+    color: $cor-txt-complementar;
+    max-width: 45vw;
+    margin: 10px 0 10px 100px;
+    @include device(tablet) {
+      font-size: rem(16);
+      margin: 10px 0 10px 50px;
+    }
+    @include device(smartphone) {
+      max-width: 100vw;
+      margin: 20px auto 0 auto;
+    }
+  }
+  div {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    flex-flow: column wrap;
+    a {
+      @include btn;
+      margin-top: 50px;
+      @include device(tablet) {
+        margin: 30px 0 0 30px;
+      }
+    }
+  }
+}

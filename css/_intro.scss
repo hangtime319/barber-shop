@@ -1,0 +1,17 @@
+.intro {
+  background: url("../img/bg-intro.jpg") no-repeat center;
+  background-size: cover;
+  background-attachment: fixed;
+  padding: 200px 0;
+  @include device(smartphone) {
+    background: url("../img/bg-intro.jpg") no-repeat center;
+    padding: 120px 0;
+  }
+  h1 {
+    @include texto(titulo);
+    @include device(smartphone) {
+      @include texto(subtitulo);
+      color: $cor-txt-complementar;
+    }
+  }
+}

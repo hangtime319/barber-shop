@@ -1,0 +1,68 @@
+.contato {
+  background: linear-gradient(
+      97.1deg,
+      rgba(204, 191, 178, 0.39) 0.67%,
+      rgba(216, 194, 173, 0.39) 99.13%
+    ),
+    url("../img/bg-contact.jpg") no-repeat center;
+  background-size: cover;
+  background-attachment: fixed;
+  padding: 3.75rem;
+  h2 {
+    @include texto(paragrafo);
+    font-weight: 500;
+    color: $cor-txt-complementar;
+    text-align: center;
+    margin-bottom: 40px;
+  }
+}
+
+.contato-info {
+  display: flex;
+  justify-content: space-around;
+  flex-flow: row wrap;
+  > img {
+    width: 200px;
+    border-radius: 50%;
+    @include device(tablet) {
+      width: 180px;
+      height: 100%;
+    }
+  }
+  ul li {
+    margin: 20px auto;
+    a {
+      display: flex;
+      align-items: center;
+    }
+  }
+  span {
+    @include texto(paragrafo);
+    color: $cor-txt-complementar;
+    margin-left: 15px;
+    @include device(tablet) {
+      font-size: rem(20);
+    }
+  }
+}
+
+.contato-social-media {
+  margin: 30px 0;
+  p {
+    @include texto(paragrafo);
+    color: $cor-txt-complementar;
+    @include device(tablet) {
+      font-size: rem(20);
+    }
+  }
+  a {
+    display: inline-block;
+    margin: 20px 20px 20px 0;
+    @include device(tablet) {
+      width: 25%;
+    }
+    @include device(smartphone) {
+      margin: 20px 10px;
+    }
+  }
+}

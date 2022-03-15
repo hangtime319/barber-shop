@@ -1,0 +1,70 @@
+//Cores
+$cor-principal: #19191a;
+$cor-secundaria: #444444;
+$cor-contraste: #af8050;
+$cor-complementar: #ccbfb2;
+$cor-efeito-botao: #b5987b;
+$cor-titulo: #f1efef;
+$cor-txt-complementar: #ffffff;
+
+// Tipos de fonte
+@function rem($pixel, $contexto: 16) {
+  @return $pixel / $contexto + rem;
+}
+
+@mixin texto($tipo) {
+  @if $tipo == titulo {
+    font-size: rem(64);
+    color: $cor-titulo;
+    text-align: center;
+  } @else if $tipo == subtitulo {
+    font-size: rem(48);
+    color: $cor-titulo;
+    text-align: center;
+  } @else if $tipo == suporte {
+    font-size: rem(36);
+    color: $cor-titulo;
+  } @else if $tipo == paragrafo {
+    font-size: rem(24);
+  }
+}
+
+// Efeitos
+@mixin efeito-btn {
+  transition: 0.3s ease-in;
+}
+
+//Botão
+@mixin btn {
+  display: inline-block;
+  padding: 10px;
+  background: $cor-contraste;
+  border-radius: 10px;
+  color: $cor-principal;
+  font-size: rem(20);
+  &:hover {
+    background: $cor-efeito-botao;
+    @include efeito-btn;
+  }
+}
+
+// Responsivo
+$l-device: 1200px;
+$m-device: 760px;
+$s-device: 480px;
+
+@mixin device($size) {
+  @if $size == desktop {
+    @media screen and (min-width: #{$l-device}) {
+      @content;
+    }
+  } @else if $size == tablet {
+    @media screen and (min-width: #{$m-device}) and (max-width: #{$l-device - 1}) {
+      @content;
+    }
+  } @else if $size == smartphone {
+    @media screen and (max-width: #{$s-device - 1}) {
+      @content;
+    }
+  }
+}

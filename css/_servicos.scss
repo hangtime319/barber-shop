@@ -1,0 +1,106 @@
+.servicos {
+  background: $cor-complementar;
+  padding: 60px;
+  position: relative;
+  @include device(tablet) {
+    display: flex;
+    padding-bottom: 0;
+  }
+  h2 {
+    @include texto(subtitulo);
+    font-weight: 500;
+    width: 1vw;
+    position: absolute;
+    top: 80px;
+    &::before {
+      content: url("../img/icons/mustache.svg");
+      display: block;
+    }
+    @include device(tablet) {
+      @include texto(suporte);
+    }
+    @include device(smartphone) {
+      @include texto(suporte);
+    }
+  }
+}
+
+.servicos-info {
+  display: flex;
+  @include device(smartphone) {
+    display: block;
+  }
+  img {
+    @include device(tablet) {
+      width: 55%;
+      height: 85%;
+    }
+    @include device(smartphone) {
+      height: 50%;
+    }
+  }
+}
+
+.servicos-lista {
+  display: flex;
+  flex-flow: column wrap;
+  align-items: center;
+  width: 35vw;
+  margin: 60px auto;
+  @include device(tablet) {
+    width: 45vw;
+    margin: 0 0 0 30px;
+  }
+  @include device(smartphone) {
+    margin: 20px 30px;
+  }
+  ul {
+    @include device(smartphone) {
+      display: flex;
+      flex-direction: column;
+    }
+  }
+  li {
+    @include texto(paragrafo);
+    color: $cor-secundaria;
+    margin: 10px auto 20px auto;
+    @include device(tablet) {
+      font-size: rem(20);
+      margin: 0 auto 10px auto;
+    }
+    @include device(smartphone) {
+      display: flex;
+      gap: 100px;
+    }
+  }
+  span {
+    @include texto(paragrafo);
+    color: $cor-secundaria;
+    margin-left: 10vw;
+    @include device(tablet) {
+      font-size: rem(20);
+      margin-left: 14px;
+    }
+    @include device(smartphone) {
+      // margin-left: 160px;
+    }
+  }
+  p {
+    font-weight: 500;
+    color: $cor-principal;
+    margin-bottom: 20px;
+    @include device(tablet) {
+      font-size: rem(16);
+    }
+    @include device(smartphone) {
+      align-self: flex-start;
+      width: 60vw;
+    }
+  }
+  a {
+    @include btn;
+    @include device(smartphone) {
+      margin-top: 20px;
+    }
+  }
+}
